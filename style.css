@@ -730,3 +730,70 @@ footer .copyright a:hover{
     font-weight: 600;
     color: #000;
 }
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    white-space: nowrap; /* Keeps items in one line */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.category-container {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 10px 20px; /* Added left-right padding */
+    scroll-padding: 20px; /* Ensures first & last items aren't clipped */
+    scrollbar-width: thin; /* Keeps scrollbar minimal */
+}
+
+.category-item {
+    text-align: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    width: 120px;
+    padding: 5px; /* Adds spacing around items */
+}
+
+.category-item img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.category-item img:hover {
+    transform: scale(1.1);
+}
+.category-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
