@@ -60,7 +60,7 @@ button:hover{
 hr{
     width: 30px;
     height: 2px;
-    background-color: #fb774b;
+    background-color: #55a4fd;
 }
 .star{
     padding: 10px 0;
@@ -83,11 +83,12 @@ hr{
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover,
-.navbar i:hover ,
-.navbar-expand-lg .navbar-nav .nav-link.active
-.navbar i.active{
-    color: coral;
+.navbar i:hover,
+.navbar-expand-lg .navbar-nav .nav-link.active,
+.navbar i.active {
+    color: #55a4fd;
 }
+
 
 .navbar i{
     font-size: 1.2rem;
@@ -113,13 +114,13 @@ hr{
 
 #bar:hover,
 #bar.active{
-    color: #fff;
+    color: #55a4fd;;
 }
 
 @media only screen and (max-width:991px){
     body> nav>div>button:hover,
     body> nav>div>button:focus{
-        background-color: #fb774b;
+        background-color: #55a4fd;
     }
     body> nav>div>button:hover #bar,
     body> nav>div>button:focus #bar{
@@ -151,7 +152,7 @@ hr{
     align-items: flex-start;
 }
 #home span{
-    color: coral;
+    color: #55a4fd;;
 }
 
 #new .one img{
@@ -175,7 +176,7 @@ hr{
 
 #new .one:hover .details{
     cursor: pointer;
-    background-color: rgba(245, 178, 178, 0.7);
+    background-color: rgba(171, 231, 255, 0.336);
 }
 
 #new .one .details button {
@@ -235,7 +236,7 @@ hr{
 }
 
 .product .buy-btn{
-    background: #fb774b;
+    background: #55a4fd;
     transform: translate(20px);
     opacity: 0;
     transition: 0.3s all;
@@ -273,7 +274,7 @@ hr{
 }
 
 #banner button{
-    background-color: #fb774b;
+    background-color: #55a4fd;
     
 }
 
@@ -320,7 +321,7 @@ footer .copyright a{
 
 footer .copyright a:hover{
     color: #fff;
-    background-color: #fb774b;
+    background-color: #55a4fd;
 }
 
 /*Blog*/
@@ -796,4 +797,25 @@ footer .copyright a:hover{
     margin-top: 5px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Changed from left to right */
+    width: 60px;
+    height: 60px;
+    z-index: 1000; /* Keeps it on top */
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.1);
 }
