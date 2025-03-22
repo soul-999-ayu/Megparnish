@@ -82,107 +82,54 @@
 <section class=" container sproduct my-5 pt-5">
     <div class="row mt-5">
         <div class="col-lg-5 col-md-12 col-12">
-            <img class="img-fluid w-100 pb-1" src="img/shop/1.jpg" id="MainImg" alt="">
-            <div class="small-img-group">
-                <div class="small-img-col">
-                    <img src="img/shop/1.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="img/shop/24.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="img/shop/25.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col">
-                    <img src="img/shop/26.jpg" width="100%" class="small-img" alt="">
+            <img class="img-fluid w-100 pb-1" style="border-radius: 10px;" src="img/shop/1.jpg" id="MainImg" alt="">
+        
+            <!-- Wrapper for horizontal scrolling -->
+            <div class="small-img-wrapper">
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="img/shop/1.jpg" class="small-img" alt="" id="img1">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/shop/24.jpg" class="small-img" alt="" id="img2">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/shop/25.jpg" class="small-img" alt="" id="img3">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/shop/26.jpg" class="small-img" alt="" id="img4">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/shop/26.jpg" class="small-img" alt="" id="img5">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/shop/26.jpg" class="small-img" alt="" id="img6">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="img/shop/26.jpg" class="small-img" alt="" id="img7">
+                    </div>
                 </div>
             </div>
         </div>
             <div class="col-lg-6 col-md-12 col-12">
-                <h6>Home/T-Shirt</h6>
-                <h3 class="py-4">Men's Fashion T Shirt</h3>
-                <h2>$139.00</h2>
-                <select class="my-3">
-                    <option>Select Size</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                    <option>Large</option>
-                    <option>Medium</option>
-                    <option>Small</option>
-                </select>
-                <input type="number" value="1">
-                <button class="buy-btn">Add To Cart</button>
+                <h6 id="category">Home/T-Shirt</h6>
+                <h3 class="py-4" id="title">Men's Fashion T Shirt</h3>
+                <p style="margin-top: -20px;" id="shortDesc"> Short Description
+                </p>
+                <h2 id="price">$139.00</h2>
+                
                 <h4 class="mt-5 mb-5">Product Details</h4>
-                <span>This Gilden Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. Fabric constructed from 100% cotton, this classis fit preshrunk jersey knit provides unmatched
+                <p style="margin-top: -40px;" id="longDesc">This Gilden Ultra Cotton T-shirt is made from a substantial 6.0 oz. per sq. yd. Fabric constructed from 100% cotton, this classis fit preshrunk jersey knit provides unmatched
                     comfort with each wear. Featuring a taped neck and shoulder
                     , and seamless doubled-needle collar, and available in a range of colors, it offer it all in the ultimate head-turing package.
-                </span>
+                </p>
+                <br>
+                <div style="display: flex; justify-content: center;">
+                    <button class="buy-btn" style="background-color: #55a4fd; border-radius: 10px;" id="getQuote">Get Quote</button>
+                </div>
             </div>
     </div>
 </section>
-
-<section id="featured" class="my-5 pb-5">
-    <div class="container text-center mt-5 py-5">
-        <h3>Related Products</h3>
-        <hr class="mx-auto">
-    </div>
-    <div class="row mx-auto container-fluid">
-        <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/featured/1.jpg" alt="">
-        <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="buy-btn"> Buy Now</button>
-    </div>
-
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/featured/2.jpg" alt="">
-        <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Snickers</h5>
-        <h4 class="p-price">$90.00</h4>
-        <button class="buy-btn"> Buy Now</button>
-    </div>
-
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/featured/3.jpg" alt="">
-        <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Bag Pack</h5>
-        <h4 class="p-price">$70.00</h4>
-        <button class="buy-btn"> Buy Now</button>
-    </div>
-    <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/featured/4.jpg" alt="">
-        <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <h5 class="p-name">Cap</h5>
-        <h4 class="p-price">$38.00</h4>
-        <button class="buy-btn"> Buy Now</button>
-    </div>
-    </div>
- </section>
 
  <footer class="mt-5 py-5">
     <div class="row container mx-auto pt-5">
@@ -263,19 +210,296 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
     <script>
-        var MainImg =document.getElementById('MainImg');
+        var MainImg = document.getElementById('MainImg');
         var smallimg = document.getElementsByClassName('small-img');
-        smallimg [0].onclick = function(){
-            MainImg.src = smallimg[0].src;
+
+        for (let i = 0; i < smallimg.length; i++) {
+            smallimg[i].onclick = function () {
+                MainImg.src = smallimg[i].src;
+            };
         }
-        smallimg [1].onclick = function(){
-            MainImg.src = smallimg[1].src;
+    </script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+  
+        // Get the 'category' value
+        const category = urlParams.get('category');
+
+        // Check if the category exists and log it (or use it as needed)
+        if (category=="gtype") {
+            document.getElementById('category').innerHTML = 'Kitchen/GType Kitchen';
+            document.getElementById('title').innerHTML = 'GType Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'GType Kitchen offers stylish, functional modular kitchens with high-quality cabinetry, countertops, and storage solutions.';
+            document.getElementById('longDesc').innerHTML = 'GType Kitchen specializes in premium modular kitchens, offering stylish, durable, and customizable solutions. With high-quality craftsmanship, innovative designs, and space-efficient storage, it enhances both aesthetics and functionality for residential and commercial spaces.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/G Shaped Kitchen Design Ideas For Your Home _ Design Cafe.jpg"
+            document.getElementById('img1').src = "products/G Shaped Kitchen Design Ideas For Your Home _ Design Cafe.jpg"
+            document.getElementById('img2').src = "products/g kit.jpg"
+            document.getElementById('img3').src = "products/g kit1.jpg"
+            document.getElementById('img4').src = "products/g-kitchen2.jpg"
+            document.getElementById('img5').src = "products/g-kith3.jpg"
+            document.getElementById('img6').src = "products/g-kit4.jpg"
+            document.getElementById('img7').src = "products/g-kit5.jpg"
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your GType Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
         }
-        smallimg [2].onclick = function(){
-            MainImg.src = smallimg[2].src;
+
+        if (category=="ctype") {
+            document.getElementById('category').innerHTML = 'Kitchen/CType Kitchen';
+            document.getElementById('title').innerHTML = 'CType Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'CType Kitchen delivers modern, space-saving modular kitchen solutions with smart storage and durable materials.';
+            document.getElementById('longDesc').innerHTML = 'CType Kitchen offers modern, space-efficient modular designs with smart storage and durable materials. It enhances functionality while maintaining a sleek, contemporary look. Perfect for homes and commercial spaces, it ensures efficiency and style.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/c-kit.jpg"
+            document.getElementById('img1').src = "products/c-kit.jpg"
+            document.getElementById('img2').src = "products/c-2.jpg"
+            document.getElementById('img3').src = "products/c-3.jpg"
+            document.getElementById('img4').src = "products/c-4.jpg"
+            document.getElementById('img5').src = "products/c-5.jpg"
+            document.getElementById('img6').src = "products/c-6.jpg"
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your CType Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
         }
-        smallimg [3].onclick = function(){
-            MainImg.src = smallimg[3].src;
+
+        if (category=="ltype") {
+            document.getElementById('category').innerHTML = 'Kitchen/LType Kitchen';
+            document.getElementById('title').innerHTML = 'LType Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'L-Type Kitchen offers a space-saving L-shaped design with smart storage and a modern look.';
+            document.getElementById('longDesc').innerHTML = 'L-Type Kitchen features a functional L-shaped layout, optimizing space and workflow. It offers smart storage solutions and a sleek, modern design. Ideal for both homes and commercial kitchens, it enhances efficiency and style.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/l cover.jpg"
+            document.getElementById('img1').src = "products/l cover.jpg"
+            document.getElementById('img2').src = "products/L-1.jpg"
+            document.getElementById('img3').src = "products/L-2.jpg"
+            document.getElementById('img4').src = "products/L-3.jpg"
+            document.getElementById('img5').src = "products/L-4.jpg"
+            document.getElementById('img6').src = "products/L-5.jpg"
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your LType Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="utype") {
+            document.getElementById('category').innerHTML = 'Kitchen/UType Kitchen';
+            document.getElementById('title').innerHTML = 'UType Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'U-Type Kitchen features a spacious U-shaped layout, maximizing storage, efficiency, and workflow for a modern cooking experience.';
+            document.getElementById('longDesc').innerHTML = 'U-Type Kitchen features a spacious U-shaped design for maximum storage and efficiency. It ensures a smooth workflow between cooking, prepping, and cleaning. Perfect for both compact and large spaces, it offers a modern look.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/U-COVER.jpg"
+            document.getElementById('img1').src = "products/U-COVER.jpg"
+            document.getElementById('img2').src = "products/U-1.jpg"
+            document.getElementById('img3').src = "products/U-2.jpg"
+            document.getElementById('img4').src = "products/U-3.jpg"
+            document.getElementById('img5').src = "products/U-4.jpg"
+            document.getElementById('img6').src = "products/U-5.jpg"
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your UType Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="straight") {
+            document.getElementById('category').innerHTML = 'Kitchen/Straight Kitchen';
+            document.getElementById('title').innerHTML = 'Straight Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'Straight Kitchen features a single-wall layout, offering a compact, efficient, and modern design ideal for small spaces.';
+            document.getElementById('longDesc').innerHTML = 'Straight Kitchen has a sleek, single-wall design that maximizes space and efficiency. It offers smart storage and a streamlined workflow for easy cooking. Ideal for small homes and apartments, it ensures a modern, clutter-free look.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/STR COVER.jpg"
+            document.getElementById('img1').src = "products/STR COVER.jpg"
+            document.getElementById('img2').src = "products/STR-1.jpg"
+            document.getElementById('img3').src = "products/STR-2.jpg"
+            document.getElementById('img4').src = "products/STRA-3.jpg"
+            document.getElementById('img5').src = "products/STRA-4.jpg"
+            document.getElementById('img6').src = "products/STRAI-5.jpg"
+            document.getElementById('img7').src = "products/STRAI-6.jpg"
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your Straight Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="parallel") {
+            document.getElementById('category').innerHTML = 'Kitchen/Parallel Kitchen';
+            document.getElementById('title').innerHTML = 'Parallel Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'Parallel Kitchen features a dual-counter layout, optimizing workflow, storage, and efficiency in a modern, space-saving design.';
+            document.getElementById('longDesc').innerHTML = 'Parallel Kitchen has a dual-counter design for efficient cooking and ample storage. It creates a seamless workflow between prep, cooking, and cleaning. Ideal for both small and large spaces, it offers a modern and functional layout.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/PARA-COVER.jpg"
+            document.getElementById('img1').src = "products/PARA-COVER.jpg"
+            document.getElementById('img2').src = "products/PARA-1.jpg"
+            document.getElementById('img3').src = "products/PARA-2.jpg"
+            document.getElementById('img4').src = "products/PARA-3.jpg"
+            document.getElementById('img5').src = "products/PARA-4.jpg"
+            document.getElementById('img6').parentElement.remove();
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your Parallel Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="island") {
+            document.getElementById('category').innerHTML = 'Kitchen/Island Kitchen';
+            document.getElementById('title').innerHTML = 'Island Kitchen';
+            document.getElementById('shortDesc').innerHTML = 'Island Kitchen features a central countertop, enhancing storage, workflow, and social interaction in a modern, spacious design.';
+            document.getElementById('longDesc').innerHTML = 'Island Kitchen includes a central countertop for extra workspace, storage, and seating. It enhances workflow and creates a social, open cooking space. Ideal for modern homes, it adds style and functionality to any kitchen.';
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/island-1.jpg"
+            document.getElementById('img1').src = "products/island-1.jpg"
+            document.getElementById('img2').src = "products/island-2.jpg"
+            document.getElementById('img3').src = "products/island-3.jpg"
+            document.getElementById('img4').src = "products/island-4.jpg"
+            document.getElementById('img5').src = "products/island-5.jpg"
+            document.getElementById('img6').parentElement.remove();
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your Island Kitchen. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="singleBed") {
+            document.getElementById('category').innerHTML = 'Bedroom/Single Bed';
+            document.getElementById('title').innerHTML = 'Single Bed';
+            document.getElementById('shortDesc').innerHTML = 'A single bed is a compact, space-saving option ideal for one person, perfect for small rooms or kids.';
+            document.getElementById('longDesc').innerHTML = "A single bed is a compact and space-efficient option, ideal for one person. It is perfect for small bedrooms, guest rooms, or kids' rooms. With a standard width of around 36-39 inches, it offers comfortable sleeping while saving space.";
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/BED -COVER.jpg"
+            document.getElementById('img1').src = "products/BED -COVER.jpg"
+            document.getElementById('img2').src = "products/BED-1.jpg"
+            document.getElementById('img3').src = "products/BED-2.jpg"
+            document.getElementById('img4').src = "products/BED-3.jpg"
+            document.getElementById('img5').src = "products/BED-4.jpg"
+            document.getElementById('img6').parentElement.remove();
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your Single Bed. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="doubleBed") {
+            document.getElementById('category').innerHTML = 'Bedroom/Double Bed';
+            document.getElementById('title').innerHTML = 'Double Bed';
+            document.getElementById('shortDesc').innerHTML = 'A double bed offers more space than a single, ideal for couples or extra comfort for one.';
+            document.getElementById('longDesc').innerHTML = "A double bed provides extra space for one person or a cozy fit for two. It’s wider than a single bed, making it ideal for small master bedrooms or guest rooms. Perfect for comfort and space efficiency.";
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/DBED-1.jpg"
+            document.getElementById('img1').src = "products/DBED-1.jpg"
+            document.getElementById('img2').src = "products/DBED-2.jpg"
+            document.getElementById('img3').src = "products/DBED-3.jpg"
+            document.getElementById('img4').src = "products/DBED-4.jpg"
+            document.getElementById('img5').src = "products/DBED-5.jpg"
+            document.getElementById('img6').src = "products/DBED-6.jpg"
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your Double Bed. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="queenBed") {
+            document.getElementById('category').innerHTML = 'Bedroom/Queen Size Bed';
+            document.getElementById('title').innerHTML = 'Queen Size Bed';
+            document.getElementById('shortDesc').innerHTML = 'A queen-size bed offers spacious comfort for two, making it ideal for master bedrooms.';
+            document.getElementById('longDesc').innerHTML = "A queen-size bed provides ample space for two people, offering a balance of comfort and practicality. It’s wider than a double bed, making it ideal for master bedrooms. Perfect for those who need extra room without taking up too much space.";
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/queen-banner.webp"
+            document.getElementById('img1').src = "products/queen-banner.webp"
+            document.getElementById('img2').src = "products/queen-1.webp"
+            document.getElementById('img3').src = "products/queen-2.webp"
+            document.getElementById('img4').src = "products/queen-3.webp"
+            document.getElementById('img5').src = "products/queen-4.webp"
+            document.getElementById('img6').src = "products/queen-5.webp"
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your Queen Size Bed. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
+        }
+
+        if (category=="kingBed") {
+            document.getElementById('category').innerHTML = 'Bedroom/King Size Bed';
+            document.getElementById('title').innerHTML = 'King Size Bed';
+            document.getElementById('shortDesc').innerHTML = 'A king-size bed offers maximum space and comfort, ideal for couples or luxury bedrooms.';
+            document.getElementById('longDesc').innerHTML = "A king-size bed provides the ultimate comfort with plenty of space for two or more. It’s the widest standard bed, making it perfect for spacious master bedrooms. Ideal for those who prioritize luxury and relaxation.";
+            document.getElementById('price').style.display = 'none';
+
+            document.getElementById('MainImg').src = "products/king-banner.webp"
+            document.getElementById('img1').src = "products/king-banner.webp"
+            document.getElementById('img2').src = "products/king-1.webp"
+            document.getElementById('img3').src = "products/king-2.webp"
+            document.getElementById('img4').src = "products/king-3.webp"
+            document.getElementById('img5').src = "products/king-4.webp"
+            document.getElementById('img6').src = "products/king-5.webp"
+            document.getElementById('img7').parentElement.remove();
+
+            document.getElementById('getQuote').onclick = function () {
+                var phoneNumber = '919220922946'; // Replace with your WhatsApp number (country code + number)
+                var message = encodeURIComponent("Hello, I am interested in your King Size Bed. Can you provide more details?");
+                var whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappURL, '_blank');
+            };
         }
 
     </script>

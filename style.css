@@ -819,3 +819,35 @@ footer .copyright a:hover{
 .whatsapp-button img:hover {
     transform: scale(1.1);
 }
+
+
+.small-img-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; 
+    display: flex;
+    padding-bottom: 5px;
+    scrollbar-width: thin; /* Firefox scrollbar */
+}
+
+.small-img-group {
+    display: flex;
+    gap: 10px; /* Adds space between images */
+    flex-wrap: nowrap; /* Prevents images from wrapping */
+}
+
+.small-img-col {
+    flex: 0 0 auto;
+    width: 100px; /* Set fixed width for small images */
+}
+
+.small-img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Hide scrollbar for a cleaner look */
+.small-img-wrapper::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Chrome/Safari */
+}
