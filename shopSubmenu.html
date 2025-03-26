@@ -119,6 +119,16 @@
             <br>
         </div>
 
+        <div onclick="window.location.href='sproduct.html';" class="product text-center col-lg-3 col-md-4 col-12" id="p5">
+            <br>
+            <img class="img-fluid mb-3" src="products/BED -COVER.jpg" alt="" id="p5-img" style="border-radius: 10px;">
+            <h5 class="p-name" id="p5-name">Sport Boots</h5>
+            <h4 class="p-price" id="p5-price">$92.00</h4>
+            <button class="buy-btn" id="p5-button" style="border-radius: 10px; margin-bottom: 20px;">Check Out</button>
+            <br>
+        </div>
+        
+
     </div>
  </section>
 
@@ -252,6 +262,122 @@
             document.getElementById('p4-price').style.display = "none";
             document.getElementById('p4-button').onclick = function() {
                 window.location.href = 'sproduct.html?category=kingBed';
+            };
+
+            document.getElementById('p5').style.display = "none";
+
+        }
+
+        if (category=="sofa") {
+
+            document.getElementById('title').innerHTML = "Sofa Collections";
+            document.getElementById('desc').innerHTML = "Sofa Collection offers a range of stylish, comfortable, and durable seating options for every space.";
+
+            document.getElementById('p1').onclick = function() {
+                window.location.href = 'sproduct.html?category=1sofa';
+            };
+            document.getElementById('p1-img').src = "products/1seatersofa1.jpg";
+            document.getElementById('p1-name').innerHTML = "1 Seater Sofa";
+            document.getElementById('p1-price').style.display = "none";
+            document.getElementById('p1-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=1sofa';
+            };
+
+            document.getElementById('p2').onclick = function() {
+                window.location.href = 'sproduct.html?category=2sofa';
+            };
+            document.getElementById('p2-img').src = "products/2seatersofa1.jpg";
+            document.getElementById('p2-name').innerHTML = "2 Seater Sofa";
+            document.getElementById('p2-price').style.display = "none";
+            document.getElementById('p2-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=2sofa';
+            };
+
+            document.getElementById('p3').onclick = function() {
+                window.location.href = 'sproduct.html?category=3sofa';
+            };
+            document.getElementById('p3-img').src = "products/3seatersofa1.jpg";
+            document.getElementById('p3-name').innerHTML = "3 Seater Sofa";
+            document.getElementById('p3-price').style.display = "none";
+            document.getElementById('p3-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=3sofa';
+            };
+
+            document.getElementById('p4').onclick = function() {
+                window.location.href = 'sproduct.html?category=lsofa';
+            };
+            document.getElementById('p4-img').src = "products/lseater1.jpg";
+            document.getElementById('p4-name').innerHTML = "L Shaped Sofa (4, 5 Seats)";
+            document.getElementById('p4-price').style.display = "none";
+            document.getElementById('p4-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=lsofa';
+            };
+
+            document.getElementById('p5').onclick = function() {
+                window.location.href = 'sproduct.html?category=woodensofa';
+            };
+            document.getElementById('p5-img').src = "products/woodensofa1.jpg";
+            document.getElementById('p5-name').innerHTML = "Wooden Sofa";
+            document.getElementById('p5-price').style.display = "none";
+            document.getElementById('p5-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=woodensofa';
+            };
+
+        }
+
+        if (category=="wardrobes") {
+
+            document.getElementById('title').innerHTML = "Wardrobe Collections";
+            document.getElementById('desc').innerHTML = "Explore our stylish and spacious wardrobe collection for organized storage solutions.";
+
+            document.getElementById('p1').onclick = function() {
+                window.location.href = 'sproduct.html?category=1wardrobe';
+            };
+            document.getElementById('p1-img').src = "products/1doorwardrobe1.jpg";
+            document.getElementById('p1-name').innerHTML = "1 Door Wardrobe";
+            document.getElementById('p1-price').style.display = "none";
+            document.getElementById('p1-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=1wardrobe';
+            };
+
+            document.getElementById('p2').onclick = function() {
+                window.location.href = 'sproduct.html?category=2wardrobe';
+            };
+            document.getElementById('p2-img').src = "products/2doorwardrobe1.jpg";
+            document.getElementById('p2-name').innerHTML = "2 Door Wardrobe";
+            document.getElementById('p2-price').style.display = "none";
+            document.getElementById('p2-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=2wardrobe';
+            };
+
+            document.getElementById('p3').onclick = function() {
+                window.location.href = 'sproduct.html?category=3wardrobe';
+            };
+            document.getElementById('p3-img').src = "products/3doorwardrobe1.jpg";
+            document.getElementById('p3-name').innerHTML = "3 Door Wardrobe";
+            document.getElementById('p3-price').style.display = "none";
+            document.getElementById('p3-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=3wardrobe';
+            };
+
+            document.getElementById('p4').onclick = function() {
+                window.location.href = 'sproduct.html?category=4wardrobe';
+            };
+            document.getElementById('p4-img').src = "products/4doorwardrobe1.jpg";
+            document.getElementById('p4-name').innerHTML = "4 Door Wardrobe";
+            document.getElementById('p4-price').style.display = "none";
+            document.getElementById('p4-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=4wardrobe';
+            };
+
+            document.getElementById('p5').onclick = function() {
+                window.location.href = 'sproduct.html?category=slidingwardrobe';
+            };
+            document.getElementById('p5-img').src = "products/slidingdoorwardrobe1.jpg";
+            document.getElementById('p5-name').innerHTML = "Sliding Door Wardrobe";
+            document.getElementById('p5-price').style.display = "none";
+            document.getElementById('p5-button').onclick = function() {
+                window.location.href = 'sproduct.html?category=slidingwardrobe';
             };
 
         }
