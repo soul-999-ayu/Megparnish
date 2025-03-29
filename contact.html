@@ -85,7 +85,7 @@
       </section>
     
       <section id="form-details" style="border-radius: 15px;">
-        <form id="whatsappForm" style="width: 100%;" onsubmit="sendToWhatsApp(event)">
+        <form id="whatsappForm" style="width: 100%;" onsubmit="sendToEmail(event)">
           <span>LEAVE A MESSAGE</span>
           <h2 style="border-radius: 10px;">We love to hear from you</h2>
           
@@ -217,54 +217,55 @@
     crossorigin="anonymous"></script>
 
     <script>
-      function sendToWhatsApp(event) {
-        event.preventDefault(); // Prevent form submission
-    
-        // Get form values
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let subject = document.getElementById("subject").value.trim() || "No Subject";
-        let message = document.getElementById("message").value.trim();
-    
-        // Get error elements
-        let nameError = document.getElementById("nameError");
-        let emailError = document.getElementById("emailError");
-        let messageError = document.getElementById("messageError");
-    
-        // Reset error messages
-        nameError.style.display = "none";
-        emailError.style.display = "none";
-        messageError.style.display = "none";
-    
-        // Validate form
-        let valid = true;
-        if (name === "") {
-          nameError.style.display = "block";
-          valid = false;
-        }
-        if (email === "" || !email.includes("@")) {
-          emailError.style.display = "block";
-          valid = false;
-        }
-        if (message === "") {
-          messageError.style.display = "block";
-          valid = false;
-        }
-    
-        if (!valid) return; // Stop execution if validation fails
-    
-        // Replace with your WhatsApp number (without + sign, use country code)
-        let phoneNumber = "919220922946"; // Example: India (+91)
-    
-        // Construct WhatsApp message
-        let whatsappMessage = `Hello, I am ${name}.%0A%0AEmail: ${email}%0A%0ASubject: ${subject}%0A%0AMessage: ${message}`;
-    
-        // Create WhatsApp URL
-        let whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-    
-        // Redirect to WhatsApp
-        window.open(whatsappURL, "_blank");
-      }
+function sendToEmail(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim() || "No Subject";
+    let message = document.getElementById("message").value.trim();
+
+    // Get error elements
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let messageError = document.getElementById("messageError");
+
+    // Reset error messages
+    nameError.style.display = "none";
+    emailError.style.display = "none";
+    messageError.style.display = "none";
+
+    // Validate form
+    let valid = true;
+    if (!name) {
+        nameError.style.display = "block";
+        valid = false;
+    }
+    if (!email || !email.includes("@")) {
+        emailError.style.display = "block";
+        valid = false;
+    }
+    if (!message) {
+        messageError.style.display = "block";
+        valid = false;
+    }
+
+    if (!valid) return; // Stop execution if validation fails
+
+    // Admin email
+    let adminEmail = "admin@megparnish.com";
+
+    // Construct email body
+    let emailBody = `Hello, I am ${name}.\n\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage: ${message}`;
+
+    // Create mailto link
+    let mailtoLink = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open email client (use location.href instead of open)
+    window.location.href = mailtoLink;
+}
+
     </script>
 </body>
 </html>
