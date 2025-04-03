@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--NAVIGATION BAR-->
+
+    <div id="loading-screen">
+        <div id="logo-container">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+    </div>
+    
+    <div id="maincontent" style="display: none;">
+        <!--NAVIGATION BAR-->
     <nav class="navbar navbar-expand-lg navbar-white bg-light py-3 fixed-top">
         <div class="container">
             <div style="display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 20px;">
@@ -47,26 +55,50 @@
       </nav>
 
       <section id="home">
-        <div class="container">
-           <h5 style="color: white;">NEW COLLECTION</h5>
+        <div class="container" style="display: flex; justify-content: center;">
+           <div>
+            <div style="display: flex; justify-content: center;">
+                <h5 style="color: white; text-shadow: -1px -1px 0 black,  
+                          1px -1px 0 rgb(13, 13, 87),  
+                         -1px  1px 0 rgb(13, 13, 87),  
+                          1px  1px 0 rgb(13, 13, 87);">NEW COLLECTION</h5>
+            </div>
+            
            <h1>
-            <span>Elegant Designs</span>
+            <span style="color: #55a4fd; text-shadow: -1px -1px 0 black,  
+            1px -1px 0 black,  
+           -1px  1px 0 black,  
+            1px  1px 0 black;">Elegant Designs</span>
             <span style="color: white; text-shadow: -1px -1px 0 black,  
                           1px -1px 0 rgb(13, 13, 87),  
                          -1px  1px 0 rgb(13, 13, 87),  
                           1px  1px 0 rgb(13, 13, 87);">
-                for Your Home
+                for  
             </span>
-        </h1>
-           <p style="color: white; text-shadow: -1px -1px 0 black,  
+
+            <span id="dynamic-text" style="color: white; text-shadow: -1px -1px 0 black,  
+                1px -1px 0 rgb(13, 13, 87),  
+                -1px  1px 0 rgb(13, 13, 87),  
+                1px  1px 0 rgb(13, 13, 87);">
+            </span>
+            </h1>
+           <div style="display: flex; justify-content: center;">
+            <div>
+                <p style="color: white; text-shadow: -1px -1px 0 black,  
                           1px -1px 0 rgb(13, 13, 87),  
                          -1px  1px 0 rgb(13, 13, 87),  
                           1px  1px 0 rgb(13, 13, 87);">Transform your space with our stylish and comfortable furniture,<br> crafted for every room.</p>
-           <button onclick="window.location.href='shop.html'" style="border-radius: 10px;">Explore Now</button>
+                <div style="display: flex; justify-content: center;">
+                    <button onclick="window.location.href='shop.html'" style="border-radius: 10px;">Explore Now</button>
+                </div>
+            </div>
+
+           </div>
+           </div>
         </div>
      </section>     
 
-     <section id="brand" class="container text-center">
+     <!-- <section id="brand" class="container text-center">
         <div class="row justify-content-center align-items-center m-0 py-5" style="gap: 50px;">
             <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
                 <img class="brand-logo img-fluid" src="img/homepagelogos/godrej.png" alt="Godrej"/>
@@ -81,10 +113,16 @@
                 <img class="brand-logo img-fluid" src="img/homepagelogos/hometown.avif" alt="HomeTown"/>
             </div>
         </div>
-    </section>
+    </section> -->
     
+    <div>
+        <div style="display: flex; justify-content: center;">
+            <h3 style="margin-top: 40px;">Featured Designs</h3>
+        </div>
+        <hr class="mx-auto">
+    </div>
 
-     <section id="new" class="w-100">
+     <section id="new" class="w-100" style="margin-top: 40px;">
         <div class="row p-0 m-0">
             <div class="one col-lg-4 col-md-12 col-12 p-0">
                 <img class ="img-fluid" src="img/new/sofa.png" alt="">
@@ -174,39 +212,12 @@
                 <br>
             </div>
             
-            <div onclick="window.location.href='sproduct.html?category=utype';" class="product text-center col-lg-3 col-md-4 col-12" id="p4">
+            <div onclick="window.location.href='shop.html?category=kitchen';" class="product text-center col-lg-3 col-md-4 col-12" id="p4">
                 <br>
-                <img class="img-fluid mb-3" src="img/shop/utype.png" alt="" id="p4-img"  style="border-radius: 10px;">
-                <h5 class="p-name" id="p4-name">UType Kitchen</h5>
+                <img class="img-fluid mb-3" src="img/shop/view.png" alt="" id="p4-img"  style="border-radius: 10px;">
+                <h5 class="p-name" id="p4-name">View All</h5>
                 <!-- <h4 class="p-price" id="p4-price">$92.00</h4> -->
-                <button class="buy-btn" id="p4-button" style="border-radius: 10px; margin-bottom: 20px;" onclick="window.location.href='sproduct.html?category=utype';">Check Out</button>
-                <br>
-            </div>
-
-            <div onclick="window.location.href='sproduct.html?category=straight';" class="product text-center col-lg-3 col-md-4 col-12" id="p4">
-                <br>
-                <img class="img-fluid mb-3" src="img/shop/straight.png" alt="" id="p4-img"  style="border-radius: 10px;">
-                <h5 class="p-name" id="p4-name">Straight Kitchen</h5>
-                <!-- <h4 class="p-price" id="p4-price">$92.00</h4> -->
-                <button class="buy-btn" id="p4-button" style="border-radius: 10px; margin-bottom: 20px;" onclick="window.location.href='sproduct.html?category=straight';">Check Out</button>
-                <br>
-            </div>
-
-            <div onclick="window.location.href='sproduct.html?category=parallel';" class="product text-center col-lg-3 col-md-4 col-12" id="p4">
-                <br>
-                <img class="img-fluid mb-3" src="img/shop/parallel.png" alt="" id="p4-img"  style="border-radius: 10px;">
-                <h5 class="p-name" id="p4-name">Parallel Kitchen</h5>
-                <!-- <h4 class="p-price" id="p4-price">$92.00</h4> -->
-                <button class="buy-btn" id="p4-button" style="border-radius: 10px; margin-bottom: 20px;" onclick="window.location.href='sproduct.html?category=parallel';">Check Out</button>
-                <br>
-            </div>
-
-            <div onclick="window.location.href='sproduct.html?category=island';" class="product text-center col-lg-3 col-md-4 col-12" id="p4">
-                <br>
-                <img class="img-fluid mb-3" src="img/shop/island.png" alt="" id="p4-img"  style="border-radius: 10px;">
-                <h5 class="p-name" id="p4-name">Island Kitchen</h5>
-                <!-- <h4 class="p-price" id="p4-price">$92.00</h4> -->
-                <button class="buy-btn" id="p4-button" style="border-radius: 10px; margin-bottom: 20px;" onclick="window.location.href='sproduct.html?category=island';">Check Out</button>
+                <button class="buy-btn" id="p4-button" style="border-radius: 10px; margin-bottom: 20px;" onclick="window.location.href='shop.html?category=kitchen';">All Kitchens</button>
                 <br>
             </div>
 
@@ -357,6 +368,9 @@
      <a href="https://wa.me/919220922946" class="whatsapp-button" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
+    </div>
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
@@ -364,5 +378,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        setTimeout(() => {
+            var typed = new Typed("#dynamic-text", {
+                strings: ["Your Home", "Your Home", "Your Office", "Your Cafe", "Anywhere"],
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 800,
+                loop: true
+            });
+        }, 3000); // Delay the start by 3 seconds
+    </script>
+    
+
+    <script>
+        function afterLoading() {
+            // Hide the loading screen and show the content
+            document.getElementById("loading-screen").style.display = "none";
+            document.getElementById("maincontent").style.display = "block";
+        }
+
+        // Run after 3 seconds
+        setTimeout(afterLoading, 3000);
+    </script>
+
+
 </body>
 </html>

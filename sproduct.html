@@ -42,6 +42,14 @@
 </head>
 <body>
 
+    <div id="loading-screen">
+        <div id="logo-container">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+    </div>
+    
+    <div id="maincontent" style="display: none;">
+
   <!--NAVIGATION BAR-->
   <nav class="navbar navbar-expand-lg navbar-white bg-light py-3 fixed-top">
     <div class="container">
@@ -81,8 +89,9 @@
 
 <section class=" container sproduct my-5 pt-5">
     <div class="row mt-5">
-        <div class="col-lg-5 col-md-12 col-12">
-            <img class="img-fluid w-100 pb-1" style="border-radius: 10px;" src="img/shop/1.jpg" id="MainImg" alt="">
+        <div style="width: 100%;">
+            <div style="margin-left: 5%;">
+                <img class="img-fluid w-100 pb-1" style="border-radius: 10px;" src="img/shop/1.jpg" id="MainImg" alt="">
         
             <!-- Wrapper for horizontal scrolling -->
             <div class="small-img-wrapper">
@@ -110,8 +119,11 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-            <div class="col-lg-6 col-md-12 col-12">
+        
+        <div style="width: 100%; margin-top: 20px;">
+            <div style="margin-left: 5%;">
                 <h6 id="category">Home/T-Shirt</h6>
                 <h3 class="py-4" id="title">Men's Fashion T Shirt</h3>
                 <p style="margin-top: -20px;" id="shortDesc"> Short Description
@@ -128,6 +140,7 @@
                     <button class="buy-btn" style="background-color: #55a4fd; border-radius: 10px;" id="getQuote">Get Quote</button>
                 </div>
             </div>
+        </div>
     </div>
 </section>
 
@@ -201,6 +214,8 @@
  <a href="https://wa.me/919220922946" class="whatsapp-button" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
+
+</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
@@ -1113,5 +1128,16 @@
 
 
     </script>
+
+<script>
+    function afterLoading() {
+        // Hide the loading screen and show the content
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("maincontent").style.display = "block";
+    }
+
+    // Run after 3 seconds
+    setTimeout(afterLoading, 3000);
+</script>
 </body>
 </html>

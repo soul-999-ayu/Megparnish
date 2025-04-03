@@ -29,6 +29,14 @@
     </style>
 </head>
 <body>
+
+    <div id="loading-screen">
+        <div id="logo-container">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+    </div>
+    
+    <div id="maincontent" style="display: none;">
  
     <!--NAVIGATION BAR-->
     <nav class="navbar navbar-expand-lg navbar-white bg-light py-3 fixed-top">
@@ -203,6 +211,8 @@
  <a href="https://wa.me/919220922946" class="whatsapp-button" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
+
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
@@ -383,6 +393,17 @@
         }
 
     </script>
+
+<script>
+    function afterLoading() {
+        // Hide the loading screen and show the content
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("maincontent").style.display = "block";
+    }
+
+    // Run after 3 seconds
+    setTimeout(afterLoading, 3000);
+</script>
 
 </body>
 </html>
