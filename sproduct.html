@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Hide number input spinner arrows */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield; /* Hide arrows in Firefox */
+        }
+
         .small-img-group{
             display: flex;
             justify-content: space-between;
@@ -210,6 +221,48 @@
         </div>
     </div>
  </footer>
+
+                 <!-- Popup Form -->
+                 <div id="quotePopup" class="custom-popup-overlay" style="display: none;">
+                    <div class="custom-popup-content">
+                        <div id="popup1">
+                            <h3>Get a Quote</h3>
+                            <form id="quoteForm">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required style="margin-top: -15px;">
+                                
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required style="margin-top: -15px;">
+                                
+                                <label for="phone">Phone Number:</label>
+                                <input type="number" id="phone" name="phone" required style="margin-top: -15px;">
+
+                                <label for="name" id="sizeLabel">Size:</label>
+                                <input type="text" id="size" name="size" style="margin-top: -15px;">
+
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" required style="margin-top: -15px; resize: none;"></textarea>
+                                
+                                <div style="margin-top: 15px;">
+                                    <button type="submit" style="background-color: #55a4fd; border-radius: 10px;">Submit</button>
+                                    <button type="button" id="closePopup" style="background-color: #55a4fd; border-radius: 10px;">Close</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="popup2" style="display: none;">
+                            <div>
+                                <img src="img/tick.png" alt="Done" width="50px">
+                            </div>
+                            <div>
+                                Quote submitted, we'll get back to you soon!
+                            </div>
+                            <br>
+                            <button type="button" id="closePopup1" style="background-color: #55a4fd; border-radius: 10px;">Close</button>
+                        </div>
+
+                    </div>
+                </div>
 
  <a href="https://wa.me/919220922946" class="whatsapp-button" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
@@ -1128,6 +1181,173 @@
 
 
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+
+    function isValidPhoneNumber(phone) {
+        const phonePattern = /^[1-9]\d{9}$/; // Ensures 10 digits and does not start with 0
+        return phonePattern.test(phone);
+    }
+
+    emailjs.init("o_9YE8y1s7sIrAiki");
+
+    let kitchens = ["gtype", "ctype", "ltype", "utype", "straight", "parallel", "island"];
+    let beds = ["singleBed", "doubleBed", "queenBed", "kingBed"];
+    let tables = ["table", "study", "dressing", "center"];
+    let others = ["almirah", "tv", "crockery", "showcase", "book", "cabinet", "readymade"];
+    let sofas = ["1sofa", "2sofa", "3sofa", "lsofa", "woodensofa"];
+    let wardrobe = ["1wardrobe", "2wardrobe", "3wardrobe", "4wardrobe", "slidingwardrobe"];
+    let chairs = ["office", "cafe"];
+
+    let size = ["gtype", "ctype", "ltype", "utype", "straight", "parallel", "island", "singleBed", "doubleBed", "queenBed", "kingBed", "tv", "crockery", "showcase", "book", "cabinet"];
+
+    let categoryNames = {
+        gtype: "G-Type Kitchen",
+        ctype: "C-Type Kitchen",
+        ltype: "L-Type Kitchen",
+        utype: "U-Type Kitchen",
+        straight: "Straight Kitchen",
+        parallel: "Parallel Kitchen",
+        island: "Island Kitchen",
+        singleBed: "Single Bed",
+        doubleBed: "Double Bed",
+        queenBed: "Queen Size Bed",
+        kingBed: "King Size Bed",
+        tv: "TV Set",
+        crockery: "Crockery Unit",
+        showcase: "Showcase Unit",
+        book: "Book Shelf",
+        cabinet: "Cabinet"
+    };
+
+    let nonsize = {
+    // Kitchens
+    gtype: "G-Type Kitchen",
+    ctype: "C-Type Kitchen",
+    ltype: "L-Type Kitchen",
+    utype: "U-Type Kitchen",
+    straight: "Straight Kitchen",
+    parallel: "Parallel Kitchen",
+    island: "Island Kitchen",
+
+    // Beds
+    singleBed: "Single Bed",
+    doubleBed: "Double Bed",
+    queenBed: "Queen Size Bed",
+    kingBed: "King Size Bed",
+
+    // Tables
+    table: "Dining Table",
+    study: "Study Table",
+    dressing: "Dressing Table",
+    center: "Center Table",
+
+    // Others
+    almirah: "Almirah",
+    tv: "TV Set",
+    crockery: "Crockery Unit",
+    showcase: "Showcase Unit",
+    book: "Book Shelf",
+    cabinet: "Cabinet",
+    readymade: "Readymade Furniture",
+
+    // Sofas
+    "1sofa": "1-Seater Sofa",
+    "2sofa": "2-Seater Sofa",
+    "3sofa": "3-Seater Sofa",
+    lsofa: "L-Shaped Sofa",
+    woodensofa: "Wooden Sofa",
+
+    // Wardrobes
+    "1wardrobe": "1-Door Wardrobe",
+    "2wardrobe": "2-Door Wardrobe",
+    "3wardrobe": "3-Door Wardrobe",
+    "4wardrobe": "4-Door Wardrobe",
+    slidingwardrobe: "Sliding-Door Wardrobe",
+
+    // Chairs
+    office: "Office Chair",
+    cafe: "Café Chair"
+};
+
+
+    if (!size.includes(category)) {
+        document.getElementById("size").style.display = "none";
+        document.getElementById("sizeLabel").style.display = "none";
+    }
+    else{
+        document.getElementById("sizeLabel").innerHTML = "Size of " + categoryNames[category] + " (LxBxH):";
+    }
+
+    document.getElementById('getQuote').onclick = function () {
+        document.getElementById('quotePopup').style.display = 'flex';
+    };
+    
+    document.getElementById('closePopup').onclick = function () {
+        document.getElementById('quotePopup').style.display = 'none';
+    };
+
+    document.getElementById('closePopup1').onclick = function () {
+        document.getElementById('quotePopup').style.display = 'none';
+        document.getElementById("getQuote").disabled = true;
+    };
+    
+    document.getElementById('quoteForm').onsubmit = function (event) {
+        event.preventDefault();
+
+        let phone = document.getElementById("phone").value;
+
+        if (isValidPhoneNumber(phone)) {
+            if(document.getElementById("size".style.display == "none")){
+                let templateParams = {
+                    name: document.getElementById("name").value,
+                    phone: document.getElementById("phone").value,
+                    email: document.getElementById("email").value,
+                    category: nonsize[category],
+                    message: document.getElementById("message").value
+                };
+
+                emailjs.send("service_qrr8gyk", "template_u0m36hn", templateParams)
+                .then(response => {
+                    document.getElementById('popup1').style.display = 'none';
+                    document.getElementById('popup2').style.display = 'block';
+                }, error => {
+                    console.error(error);
+                });
+            }
+
+            else{
+                let templateParams = {
+                    name: document.getElementById("name").value,
+                    phone: document.getElementById("phone").value,
+                    email: document.getElementById("email").value,
+                    category: categoryNames[category],
+                    size: document.getElementById("size").value,
+                    message: document.getElementById("message").value
+                };
+
+                emailjs.send("service_qrr8gyk", "template_o5ygp6d", templateParams)
+                .then(response => {
+                    document.getElementById('popup1').style.display = 'none';
+                    document.getElementById('popup2').style.display = 'block';
+                }, error => {
+                    console.error(error);
+                });
+            }
+        } else {
+            document.getElementById("phone").style.color = "red";
+        }
+
+        //Sending email code here
+        
+
+        
+        
+    };
+</script>
+
 
 <script>
     function afterLoading() {
