@@ -114,7 +114,7 @@ hr{
 
 #bar:hover,
 #bar.active{
-    color: #55a4fd;;
+    color: #55a4fd;
 }
 
 @media only screen and (max-width:991px){
@@ -923,4 +923,73 @@ footer .copyright a:hover{
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.modal {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.testimonial {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background: #f9f9f9;
+  border-left: 5px solid #55a4fd;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.testimonial-meta {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+}
+
+.testimonial-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.testimonial-info .location::after {
+  content: " • ";
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

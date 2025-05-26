@@ -115,7 +115,7 @@
         </div>
 
         <!-- Popup Modal -->
-        <div id="popupKitchenModal" class="popup-overlay" style="display: none;">
+        <div id="popupKitchenModal" class="popup-overlay modal" style="display: none;">
             <div class="popup-content">
                 <span class="close-btn" onclick="closeKitchenPopup()">&times;</span>
                 <h3>Kitchen Furniture</h3>
@@ -153,7 +153,7 @@
         </div>
         
         <!-- Popup Modal -->
-        <div id="popupBedroomModal" class="popup-overlay" style="display: none;">
+        <div id="popupBedroomModal" class="popup-overlay modal" style="display: none;">
             <div class="popup-content">
                 <span class="close-btn" onclick="closeBedroomPopup()">&times;</span>
                 <h3>Bedroom Furniture</h3>
@@ -183,7 +183,7 @@
         </div>
 
         <!-- Popup Modal -->
-        <div id="popupDrawingModal" class="popup-overlay" style="display: none;">
+        <div id="popupDrawingModal" class="popup-overlay modal" style="display: none;">
             <div class="popup-content">
                 <span class="close-btn" onclick="closeDrawingPopup()">&times;</span>
                 <h3>Drawing Room Furniture</h3>
@@ -209,7 +209,7 @@
         </div>
 
         <!-- Popup Modal -->
-        <div id="popupLivingModal" class="popup-overlay" style="display: none;">
+        <div id="popupLivingModal" class="popup-overlay modal" style="display: none;">
             <div class="popup-content">
                 <span class="close-btn" onclick="closeLivingPopup()">&times;</span>
                 <h3>Living Room Furniture</h3>
@@ -235,7 +235,7 @@
         </div>
 
         <!-- Popup Modal -->
-        <div id="popupDressingModal" class="popup-overlay" style="display: none;">
+        <div id="popupDressingModal" class="popup-overlay modal" style="display: none;">
             <div class="popup-content">
                 <span class="close-btn" onclick="closeDressingPopup()">&times;</span>
                 <h3>Dressing Room Furniture</h3>
@@ -352,70 +352,44 @@
 </div>
 
  <script>
-    function openKitchenPopup() {
-        document.getElementById("popupKitchenModal").style.display = "flex";
+    function openPopup(id) {
+        const modal = document.getElementById(id);
+        modal.style.display = "flex";
+
+        requestAnimationFrame(() => {
+            modal.classList.add("show");
+        });
     }
 
-    function closeKitchenPopup() {
-        document.getElementById("popupKitchenModal").style.display = "none";
+    function closePopup(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove("show");
+
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 500); // Match with CSS transition duration
     }
 
-    function openBedroomPopup() {
-        document.getElementById("popupBedroomModal").style.display = "flex";
-    }
+    // Example calls:
+    function openKitchenPopup() { openPopup("popupKitchenModal"); }
+    function closeKitchenPopup() { closePopup("popupKitchenModal"); }
 
-    function closeBedroomPopup() {
-        document.getElementById("popupBedroomModal").style.display = "none";
-    }
+    function openBedroomPopup() { openPopup("popupBedroomModal"); }
+    function closeBedroomPopup() { closePopup("popupBedroomModal"); }
 
-    function openDrawingPopup() {
-        document.getElementById("popupDrawingModal").style.display = "flex";
-    }
+    function openDrawingPopup() { openPopup("popupDrawingModal"); }
+    function closeDrawingPopup() { closePopup("popupDrawingModal"); }
 
-    function closeDrawingPopup() {
-        document.getElementById("popupDrawingModal").style.display = "none";
-    }
+    function openLivingPopup() { openPopup("popupLivingModal"); }
+    function closeLivingPopup() { closePopup("popupLivingModal"); }
 
-    function openLivingPopup() {
-        document.getElementById("popupLivingModal").style.display = "flex";
-    }
+    function openDressingPopup() { openPopup("popupDressingModal"); }
+    function closeDressingPopup() { closePopup("popupDressingModal"); }
 
-    function closeLivingPopup() {
-        document.getElementById("popupLivingModal").style.display = "none";
-    }
-
-    function openDressingPopup() {
-        document.getElementById("popupDressingModal").style.display = "flex";
-    }
-
-    function closeDressingPopup() {
-        document.getElementById("popupDressingModal").style.display = "none";
-    }
 </script>
 
 <script>
-    // Get the URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-  
-    // Get the 'category' value
-    const category = urlParams.get('category');
-  
-    // Check if the category exists and log it (or use it as needed)
-    if (category=="kitchen") {
-        document.getElementById("popupKitchenModal").style.display = "flex";
-    }
-    if (category=="bedroom") {
-        document.getElementById("popupBedroomModal").style.display = "flex";
-    }
-    if (category=="drawing") {
-        document.getElementById("popupDrawingModal").style.display = "flex";
-    }
-    if (category=="living") {
-        document.getElementById("popupLivingModal").style.display = "flex";
-    }
-    if (category=="dressing") {
-        document.getElementById("popupDressingModal").style.display = "flex";
-    }
+    
   </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
@@ -427,9 +401,33 @@
 
     <script>
         function afterLoading() {
+            console.log("test");
             // Hide the loading screen and show the content
             document.getElementById("loading-screen").style.display = "none";
             document.getElementById("maincontent").style.display = "block";
+
+            // Get the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+        
+            // Get the 'category' value
+            const category = urlParams.get('category');
+        
+            // Check if the category exists and log it (or use it as needed)
+            if (category=="kitchen") {
+                openKitchenPopup();
+            }
+            if (category=="bedroom") {
+                openBedroomPopup();
+            }
+            if (category=="drawing") {
+                openDrawingPopup();
+            }
+            if (category=="living") {
+                openLivingPopup();
+            }
+            if (category=="dressing") {
+                openDressingPopup();
+            }
         }
 
         // Run after 3 seconds
