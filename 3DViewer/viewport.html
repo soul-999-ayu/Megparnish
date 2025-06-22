@@ -38,7 +38,7 @@
 </head>
 <body>
 
-  <h2 style="text-align:center; margin-top: 20px;">3D Bed Viewer</h2>
+  <h2 style="text-align:center; margin-top: 20px;" id="label69">3D Bed Viewer</h2>
   <div id="viewer"></div>
 
   <div id="controls">
@@ -53,8 +53,59 @@
     // Get the 'category' value
     const category = urlParams.get('category');
 
-    console.log("ll");
-    console.log(category);
+    let categoryNames = {
+      gtype: "G-Type Kitchen",
+      ctype: "C-Type Kitchen",
+      ltype: "L-Type Kitchen",
+      utype: "U-Type Kitchen",
+      straight: "Straight Kitchen",
+      parallel: "Parallel Kitchen",
+      island: "Island Kitchen",
+
+      // Beds
+      singleBed: "Single Bed",
+      doubleBed: "Double Bed",
+      queenBed: "Queen Size Bed",
+      kingBed: "King Size Bed",
+
+      // Tables
+      table: "Dining Table",
+      study: "Study Table",
+      dressing: "Dressing Table",
+      center: "Center Table",
+
+      // Others
+      almirah: "Almirah",
+      tv: "TV Set",
+      crockery: "Crockery Unit",
+      showcase: "Showcase Unit",
+      book: "Book Shelf",
+      cabinet: "Cabinet",
+      readymade: "Readymade Furniture",
+
+      // Sofas
+      "1sofa": "1-Seater Sofa",
+      "2sofa": "2-Seater Sofa",
+      "3sofa": "3-Seater Sofa",
+      lsofa: "L-Shaped Sofa",
+      woodensofa: "Wooden Sofa",
+
+      // Wardrobes
+      "1wardrobe": "1-Door Wardrobe",
+      "2wardrobe": "2-Door Wardrobe",
+      "3wardrobe": "3-Door Wardrobe",
+      "4wardrobe": "4-Door Wardrobe",
+      slidingwardrobe: "Sliding-Door Wardrobe",
+
+      // Chairs
+      office: "Office Chair",
+      cafe: "Café Chair"
+    };
+
+    // console.log("ll");
+    // console.log(categoryNames[category]);
+
+    document.getElementById("label69").innerHTML = categoryNames[category] + " 3D Model";
 
     import * as THREE from 'https://esm.sh/three@0.160.0';
     import { OrbitControls } from 'https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js';
@@ -66,6 +117,10 @@
 
     // Zoom In - Camera position: rx: y: z: [[Prototype]]: Object
     camera.position.set(14.24959374599698, 2.9866226029083904, -0.29848643801216074);
+
+    if(category=="singleBed"){
+      camera.position.set(3.4218340541708936, 0.7171942661494743, -0.07167720543507469);
+    }
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, 600);
@@ -82,7 +137,7 @@
     controls.enableDamping = true;
 
     const loader = new GLTFLoader();
-    loader.load('3DModels/bed.glb', function (gltf) {
+    loader.load('3DModels/'+category+'.glb', function (gltf) {
       scene.add(gltf.scene);
       gltf.scene.position.y = 0;
     }, undefined, function (error) {
